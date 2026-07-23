@@ -1,0 +1,102 @@
+aid: national-bank-of-canada
+name: National Bank of Canada
+review:
+  question: Does National Bank of Canada expose a public first-party developer API portal with downloadable specs?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    National Bank of Canada (Banque Nationale du Canada, TSX: NA) — a Schedule I
+    chartered bank, sixth-largest in Canada and the leading bank in Quebec — does
+    NOT operate a public, self-serve first-party developer portal. Candidate
+    developer hosts do not resolve (developer.nbc.ca, developers.nbc.ca,
+    api.nbc.ca, developer.nationalbank.ca all return connection failures). The
+    corporate website (https://www.nbc.ca/) is live (HTTP 200) but exposes no
+    API console, no developer documentation, and no downloadable OpenAPI/Swagger.
+
+    National Bank's open-finance posture is aggregator-mediated, and it is an
+    early mover: it was the first major Canadian bank to launch a secure,
+    consent-based data-sharing feed for retail customers. Rather than a public
+    API, access is delivered through aggregators — principally Flinks, the
+    Montreal aggregator in which National Bank holds an ~80% stake, via its Open
+    Banking Environment (OBE), and also through Plaid. In the consent flow a
+    customer is redirected to National Bank to authenticate and approve data
+    sharing (an OAuth-style redirect/token grant), after which data flows over a
+    secure, FDX-aligned feed. Fintechs onboard through the aggregator's
+    accreditation process, not a National Bank developer console.
+
+    National Bank and Flinks are founding participants of the FDX Canada working
+    group, aligning data-sharing on the FDX technical standard. The bank has
+    publicly positioned itself ahead of Canada's Consumer-Driven Banking
+    framework (Budget 2024 / FCAC oversight), which is legislated but not yet
+    operational — there is no live mandate and no framework endpoint. No
+    first-party OpenAPI was harvested because none is publicly published.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: null
+    downloadableOpenAPI: false
+    specProvenance: none
+    fdxParticipant: true
+    fdxDetail: Founding participant of the FDX Canada working group; data-sharing aligned to the FDX technical standard.
+    cdbPosture: Publicly positioned ahead of Canada's legislated-but-not-yet-operational Consumer-Driven Banking framework (FCAC oversight).
+    accessModel: aggregator-mediated
+    aggregators:
+      - name: Flinks
+        relationship: National Bank holds an ~80% stake; primary data-access path via the Open Banking Environment (OBE).
+        docs: https://docs.flinks.com
+      - name: Plaid
+        relationship: Third-party aggregator listing National Bank connectivity.
+    authModel: OAuth-style consent redirect (customer authenticates at National Bank and grants a data-access token to the aggregator); no public API-key or mTLS developer credentialing surface is documented.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public first-party REST API base URL is documented by National Bank. Aggregator (Flinks) exposes REST, but that is a separate entity's surface.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface is documented.
+  hostsProbed:
+    - url: https://www.nbc.ca/
+      status: 200
+      note: Corporate website live; no developer/API section.
+    - url: https://developer.nbc.ca
+      status: 000
+      note: Does not resolve (no such host).
+    - url: https://developers.nbc.ca
+      status: 000
+      note: Does not resolve.
+    - url: https://api.nbc.ca
+      status: 000
+      note: Does not resolve.
+    - url: https://developer.nationalbank.ca
+      status: 000
+      note: Does not resolve.
+    - url: https://developer.bnc.ca
+      status: 000
+      note: Does not resolve.
+sources:
+  - url: https://www.nbc.ca/
+    type: Website
+    note: National Bank corporate site (HTTP 200). No developer portal or API documentation.
+  - url: https://www.openbankingtracker.com/provider/bnc-national-bank
+    type: Reference
+    note: Lists no first-party API products for BNC National Bank; access via aggregators (Plaid).
+  - url: https://www.flinks.com/go/open-banking-api
+    type: DataAccess
+    note: Flinks Open Banking / OBE — the aggregator path (Flinks is ~80% National Bank-owned) for consent-based data access.
+  - url: https://docs.flinks.com
+    type: Documentation
+    note: Flinks developer documentation (Connect, Enrich, Pay, Outbound). Separate-entity aggregator surface, not a National Bank first-party API.
+  - url: https://financialdataexchange.org/fdx-feed/leading-canadian-financial-services-firms-moving-to-adopt-the-fdx-technical-standards-for-secure-financial-data-sharing/
+    type: Reference
+    note: National Bank of Canada and Flinks among founding participants of FDX Canada.
+actions:
+  openapiHarvested: false
+  reason: |
+    No public first-party OpenAPI/Swagger is published by National Bank of Canada.
+    The bank exposes no self-serve developer portal; consumer data access is
+    aggregator-mediated (Flinks OBE, Plaid) under a consent-redirect model. This
+    is recorded as an identity-only (built-stub) profile with an honest
+    aggregator-only, FDX-aligned open-finance posture. No spec was fabricated.

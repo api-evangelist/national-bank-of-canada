@@ -1,0 +1,83 @@
+aid: national-bank-of-canada
+url: https://raw.githubusercontent.com/api-evangelist/national-bank-of-canada/refs/heads/main/apis.yml
+name: National Bank of Canada
+kind: company
+description: >-
+  National Bank of Canada (Banque Nationale du Canada, TSX: NA) is a Schedule I
+  chartered bank headquartered in Montreal, Quebec, founded in 1859. It is the
+  sixth-largest of Canada's Big Six banks and the leading bank in Quebec,
+  serving personal, commercial, wealth-management, and financial-markets clients.
+  On open finance, National Bank is a notable first-mover: it was the first
+  major Canadian bank to launch a secure, consent-based data-sharing API for
+  retail customers, but it does NOT operate a public self-serve first-party
+  developer portal. Programmatic access to customer financial data is delivered
+  through aggregators rather than a downloadable public API — principally Flinks,
+  the Montreal aggregator in which National Bank holds an ~80% stake, via its
+  Open Banking Environment (OBE), and also through Plaid. National Bank and
+  Flinks are founding participants of the FDX Canada working group, aligning
+  their data-sharing on the FDX technical standard, and the bank is positioning
+  ahead of Canada's forthcoming, legislated-but-not-yet-operational
+  Consumer-Driven Banking framework (Budget 2024 / FCAC oversight). Today access
+  is voluntary and aggregator-mediated; there is no operational open-banking
+  mandate and no public first-party API surface.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Big Six
+- Open Banking
+- Consumer-Driven Banking
+- FDX
+- Data Aggregation
+- Payments
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: national-bank-of-canada:consumer-data-access-aggregator
+  name: National Bank Consumer Data Access (Aggregator-Mediated)
+  description: >-
+    National Bank of Canada exposes no public, self-serve first-party developer
+    API. Consumer financial-data access is consent-based and aggregator-mediated:
+    when a customer links a fintech app, National Bank redirects the customer to
+    authenticate and grant consent, then shares data through a secure,
+    FDX-aligned data feed. This access is delivered principally via Flinks
+    (National Bank's ~80%-owned Montreal aggregator) through its Open Banking
+    Environment (OBE), and also via Plaid. Fintechs onboard through the
+    aggregator's accreditation process rather than a National Bank developer
+    console. No National Bank OpenAPI/Swagger is publicly downloadable.
+  humanURL: https://www.flinks.com/go/open-banking-api
+  tags:
+  - Open Banking
+  - Data Aggregation
+  - FDX
+  - Consumer-Driven Banking
+  - Flinks
+  properties:
+  - type: Documentation
+    url: https://www.flinks.com/go/open-banking-api
+  - type: DataAccess
+    url: https://docs.flinks.com
+common:
+- type: Website
+  url: https://www.nbc.ca/
+- type: About
+  url: https://www.nbc.ca/about-us.html
+- type: LinkedIn
+  url: https://www.linkedin.com/company/national-bank-of-canada
+- type: InvestorRelations
+  url: https://www.nbc.ca/about-us/investors.html
+- type: Newsroom
+  url: https://www.nbc.ca/about-us/news-media/press-release.html
+- type: Careers
+  url: https://emplois.bnc.ca/en_CA/careers
+- type: PrivacyPolicy
+  url: https://www.nbc.ca/privacy-policy.html
+- type: TermsOfService
+  url: https://www.nbc.ca/terms-of-use.html
+- type: DataAccess
+  url: https://www.flinks.com/go/open-banking-api
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
