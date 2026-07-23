@@ -60,6 +60,10 @@ apis:
   - type: DataAccess
     url: https://docs.flinks.com
 common:
+- type: DomainSecurity
+  url: security/national-bank-of-canada-domain-security.yml
+- type: LLMsTxt
+  url: llms/national-bank-of-canada-llms.txt
 - type: Website
   url: https://www.nbc.ca/
 - type: About
