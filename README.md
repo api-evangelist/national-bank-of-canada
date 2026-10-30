@@ -1,4 +1,4 @@
-# National Bank of Canada (national-bank-of-canada)
+# National Bank of Canada
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,72 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-National Bank of Canada (Banque Nationale du Canada, TSX: NA) is a Schedule I chartered bank headquartered in Montreal, Quebec, founded in 1859. It is the sixth-largest of Canada's Big Six banks and the leading bank in Quebec, serving personal, commercial, wealth-management, and financial-markets clients. On open finance, National Bank is a first-mover — the first major Canadian bank to launch a secure, consent-based data-sharing API for retail customers — but it does **not** operate a public self-serve first-party developer portal.
+National Bank of Canada (Banque Nationale du Canada, TSX: NA) is a Schedule I chartered bank headquartered in Montreal, Quebec, founded in 1859. It is the sixth-largest of Canada's Big Six banks and the leading bank in Quebec, serving personal, commercial, wealth-management, and financial-markets clients. On open finance, National Bank is a notable first-mover: it was the first major Canadian bank to launch a secure, consent-based data-sharing API for retail customers, but it does NOT operate a public self-serve first-party developer portal. Programmatic access to customer financial data is delivered through aggregators rather than a downloadable public API — principally Flinks, the Montreal aggregator in which National Bank holds an ~80% stake, via its Open Banking Environment (OBE), and also through Plaid. National Bank and Flinks are founding participants of the FDX Canada working group, aligning their data-sharing on the FDX technical standard, and the bank is positioning ahead of Canada's forthcoming, legislated-but-not-yet-operational Consumer-Driven Banking framework (Budget 2024 / FCAC oversight). Today access is voluntary and aggregator-mediated; there is no operational open-banking mandate and no public first-party API surface.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/national-bank-of-canada/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/national-bank-of-canada/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Canada · Big Six · Open Banking · Consumer-Driven Banking · FDX · Payments
 
-## Open-Finance Posture (Honest Assessment)
+## National Bank of Canada on APIs.io
 
-Canada has **no operational open-banking mandate**. The federal Consumer-Driven Banking framework (Budget 2024 / Fall Economic Statement 2024, with FCAC oversight) is legislated but not yet live, so access today is voluntary and fragmented.
+Everything profiled for National Bank of Canada is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/national-bank-of-canada/](https://apis.io/providers/national-bank-of-canada/)** — or go straight to one of the APIs or properties below.
 
-For National Bank specifically:
+### APIs (1)
 
-- **No first-party public developer portal.** `developer.nbc.ca`, `api.nbc.ca`, and similar hosts do not resolve. There is no public self-serve API console or downloadable OpenAPI/Swagger.
-- **Aggregator-mediated data access.** Consumer financial-data sharing is consent-based and delivered through aggregators, principally **Flinks** — the Montreal aggregator in which National Bank holds an ~80% stake — via its **Open Banking Environment (OBE)**, and also through **Plaid**. Customers are redirected to National Bank to authenticate and grant consent; data is then shared over a secure, FDX-aligned feed. Fintechs onboard through the aggregator's accreditation process, not a National Bank developer console.
-- **FDX participant.** National Bank and Flinks are founding participants of the FDX Canada working group, aligning data-sharing on the FDX technical standard.
-- **Consumer-Driven Banking (CDB).** National Bank has publicly positioned itself ahead of Canada's forthcoming consumer-driven banking framework. No framework endpoint exists yet — the framework is not operational.
+- [National Bank Consumer Data Access (Aggregator-Mediated)](https://apis.io/apis/national-bank-of-canada/consumer-data-access-aggregator/) — National Bank of Canada exposes no public, self-serve first-party developer API. Consumer financial-data access is consent-based and aggregator-mediated:…
 
-## Tags
+### Published properties
 
-- Financial Services
-- Banking
-- Canada
-- Big Six
-- Open Banking
-- Consumer-Driven Banking
-- FDX
-- Data Aggregation
-- Payments
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [National Bank Of Canada Domain Security](https://apis.io/security/national-bank-of-canada/national-bank-of-canada-domain-security/)
 
-### National Bank Consumer Data Access (Aggregator-Mediated)
+## Where to find this API
 
-National Bank of Canada exposes no public, self-serve first-party developer API. Consumer financial-data access is consent-based and aggregator-mediated (Flinks OBE and Plaid), with fintech onboarding handled through the aggregator's accreditation process. No National Bank OpenAPI/Swagger is publicly downloadable.
-
-- **Human URL:** [https://www.flinks.com/go/open-banking-api](https://www.flinks.com/go/open-banking-api)
-
-#### Tags
-
-- Open Banking
-- Data Aggregation
-- FDX
-- Consumer-Driven Banking
-- Flinks
-
-#### Properties
-
-- [Documentation](https://www.flinks.com/go/open-banking-api)
-- [Data Access](https://docs.flinks.com)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.nbc.ca/)
-- [About](https://www.nbc.ca/about-us.html)
-- [LinkedIn](https://www.linkedin.com/company/national-bank-of-canada)
-- [Investor Relations](https://www.nbc.ca/about-us/investors.html)
-- [Newsroom](https://www.nbc.ca/about-us/news-media/press-release.html)
-- [Careers](https://emplois.bnc.ca/en_CA/careers)
-- [Privacy Policy](https://www.nbc.ca/privacy-policy.html)
-- [Terms of Service](https://www.nbc.ca/terms-of-use.html)
-- [Data Access (Flinks Open Banking)](https://www.flinks.com/go/open-banking-api)
+- [Terms of service](https://www.nbc.ca/terms-of-use.html)
+- [Privacy policy](https://www.nbc.ca/privacy-policy.html)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 11.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 65.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/national-bank-of-canada/](https://apis.io/providers/national-bank-of-canada/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for National Bank of Canada: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/national-bank-of-canada/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
